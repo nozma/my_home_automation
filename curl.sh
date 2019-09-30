@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source ./env.sh
+source /home/pi/auto/env.sh
+AUTO_HOME=/home/pi/auto
 
 case $1 in
 
@@ -19,6 +20,14 @@ case $1 in
       sleep 1
       curl -X POST "${REMO_LIGHT_SWITCH}" -H "accept: application/json" -H "Authorization: Bearer ${REMO_ACCESS_TOKEN}"
     fi
+    ;;
+
+  light_up)
+    curl -X POST "${REMO_LIGHT_UP}" -H "accept: application/json" -H "Authorization: Bearer ${REMO_ACCESS_TOKEN}"
+    ;;
+
+  light_down)
+    curl -X POST "${REMO_LIGHT_DOWN}" -H "accept: application/json" -H "Authorization: Bearer ${REMO_ACCESS_TOKEN}"
     ;;
 
   hue_1)
