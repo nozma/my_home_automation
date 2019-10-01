@@ -11,3 +11,7 @@
     - URLに`/api`、Message Bodyに`{"devicetype":"RaspberryPi"}`を入力。
     - Hue Bridgeのリンクボタンを押す。
     - POST実行。
+
+### 参考文献
+
+- [Raspberry PiではじめるDIYスマートホーム（第2版） - yagitch.com - BOOTH](https://booth.pm/ja/items/1034342)
