@@ -21,7 +21,7 @@ if [ -e ${AUTO_HOME}/ir_on.touch ]; then
         sleep 1
       done
   fi
-  rm light*.touch
-  touch light$1.touch
+  rm ${AUTO_HOME}/light*.touch
+  touch ${AUTO_HOME}/light$1.touch
 fi
 
