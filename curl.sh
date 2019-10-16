@@ -59,11 +59,11 @@ case $1 in
     ;;
 
   hue_night_2)
-    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":357, "bri":170}' 
+    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":357, "bri":140}' 
     ;;
 
   hue_night_3)
-    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":357, "bri":254}' 
+    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":357, "bri":200}' 
     ;;
 
 esac
