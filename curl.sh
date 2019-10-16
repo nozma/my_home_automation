@@ -41,4 +41,29 @@ case $1 in
   hue_off)
     curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":false}'
     ;;
+  
+  hue_morning_1)
+    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":154, "bri":85}' 
+    ;;
+
+  hue_morning_2)
+    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":154, "bri":170}' 
+    ;;
+
+  hue_morning_3)
+    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":154, "bri":254}' 
+    ;;
+
+  hue_night_1)
+    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":357, "bri":85}' 
+    ;;
+
+  hue_night_2)
+    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":357, "bri":170}' 
+    ;;
+
+  hue_night_3)
+    curl -i "http://${HUE_ADDRESS}/api/${HUE_USERNAME}/groups/0/action" -X PUT -d '{"on":true, "ct":357, "bri":254}' 
+    ;;
+
 esac
