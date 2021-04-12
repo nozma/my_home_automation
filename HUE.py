@@ -3,6 +3,7 @@ import requests
 import os
 import csv
 import datetime
+import sys
 
 HUE_API = f"http://{os.environ.get('HUE_ADDRESS')}/api/{os.environ.get('HUE_USERNAME')}/groups/0/action"
 LIGHTING_SCHEDULE = list(csv.reader(open("./lighting_schedle.csv", "r")))[1:]
@@ -18,10 +19,10 @@ def set_HUE(on: bool, K: int, bri: int) -> None:
         }
     )
 
-def adjust_HUE() -> None:
+def adjust_HUE(on: bool = None) -> None:
     now_light_setting = get_light_setting_now()
     set_HUE(
-        on = None,
+        on = on,
         K = int(now_light_setting[1]),
         bri = int(now_light_setting[2])
     )
@@ -41,4 +42,7 @@ def get_light_setting_now() -> [int, int]:
 
 
 if __name__ == "__main__":
-    adjust_HUE()
+    if (len(sys.argv) > 1):
+        adjust_HUE(on=(sys.argv[1] == "True"))
+    else:
+        adjust_HUE()

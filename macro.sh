@@ -5,7 +5,7 @@ AUTO_HOME=/home/pi/auto
 case $1 in
 
   light_off)
-    ${AUTO_HOME}/curl.sh hue_off
+    ${AUTO_HOME}/HUE_adjust.sh False
     ${AUTO_HOME}/curl.sh light_off
     ;;
 
