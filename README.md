@@ -11,6 +11,10 @@
     - URLに`/api`、Message Bodyに`{"devicetype":"RaspberryPi"}`を入力。
     - Hue Bridgeのリンクボタンを押す。
     - POST実行。
+  - `HUE_TARGET_GROUP`
+    - 操作対象とするグループ。
+    - グループは`/api/{username}/groups`で確認できる。
+    - 現状1つだけ対応。
 
 ### 参考文献
 
