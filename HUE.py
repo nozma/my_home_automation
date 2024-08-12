@@ -5,7 +5,7 @@ import csv
 import datetime
 import sys
 
-HUE_API = f"http://{os.environ.get('HUE_ADDRESS')}/api/{os.environ.get('HUE_USERNAME')}/groups/0/action"
+HUE_API = f"http://{os.environ.get('HUE_ADDRESS')}/api/{os.environ.get('HUE_USERNAME')}/groups/{os.environ.get('HUE_TARGET_GROUP')}/action"
 LIGHTING_SCHEDULE = list(csv.reader(open("./lighting_schedle.csv", "r")))[1:]
 
 
